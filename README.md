@@ -1,6 +1,6 @@
 # VYAVANTA
 
-**Every Business. One Ecosystem.**
+**EVERY BUSINESS. ONE ECOSYSTEM.**
 
 VYAVANTA is the target brand for this commerce prototype: restaurant and retail POS, inventory, marketplace, delivery, and SaaS administration.
 

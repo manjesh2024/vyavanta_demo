@@ -36,7 +36,7 @@ The current HTML demo presents sample data and illustrative interactions. It doe
 ### Official identity
 
 - Brand: **VYAVANTA**
-- Tagline: **Every Business. One Ecosystem.**
+- Tagline: **EVERY BUSINESS. ONE ECOSYSTEM.**
 - Selected visual direction: circular/orbit-like emblem with purple, violet, magenta/pink and orange gradients; navy wordmark.
 - Logo artwork must come from the clean original master supplied by the product owner. Do not redraw, regenerate, approximate, recolour, simplify or reconstruct it.
 

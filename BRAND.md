@@ -1,7 +1,7 @@
 # VYAVANTA Brand Notes
 
 **Brand:** VYAVANTA  
-**Tagline:** Every Business. One Ecosystem.
+**Tagline:** EVERY BUSINESS. ONE ECOSYSTEM.
 
 ## Identity
 
