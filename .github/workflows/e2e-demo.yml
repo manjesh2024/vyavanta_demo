@@ -26,7 +26,7 @@ jobs:
             if curl -fsS http://127.0.0.1:8000/ >/dev/null; then exit 0; fi
             sleep 1
           done
-          cat /tmp/vyavsetu-http.log
+          cat /tmp/vyavanta-http.log
           exit 1
       - name: Test core customer/POS/driver workflows
         run: node tests/e2e-demo.cjs
