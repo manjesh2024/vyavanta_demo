@@ -14,9 +14,9 @@
 ## Publish through GitHub Pages
 The deployment workflow is already committed at `.github/workflows/pages.yml`, but GitHub Pages must first be enabled in repository settings:
 
-1. Open [Vyavsetu Pages settings](https://github.com/manjesh2024/vyavsetu/settings/pages).
+1. Open [VYAVANTA Pages settings](https://github.com/manjesh2024/vyavanta_demo/settings/pages).
 2. Under **Build and deployment → Source**, select **GitHub Actions** and save.
-3. Open [Actions](https://github.com/manjesh2024/vyavsetu/actions) and rerun the latest failed deployment workflow.
+3. Open [Actions](https://github.com/manjesh2024/vyavanta_demo/actions) and rerun the latest failed deployment workflow.
 4. Share the live URL only after the deployment job shows **success**. Current demo URL: https://manjesh2024.github.io/vyavsetu/
 
 ## Checkout test

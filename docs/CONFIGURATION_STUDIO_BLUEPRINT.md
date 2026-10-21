@@ -1,4 +1,4 @@
-# Vyavsetu Configuration Studio — Product Blueprint & Engineering Handoff
+# VYAVANTA Configuration Studio — Product Blueprint & Engineering Handoff
 
 **Document status:** Proposed product contract + implementation blueprint  
 **Prototype status:** Isolated browser-only sandbox at `/studio/`  
@@ -9,7 +9,7 @@
 
 ## 1. Product vision
 
-Vyavsetu should give authorised administrators a controlled way to configure the experience each audience sees, without requiring a code release for every supported change. This is a **configuration-driven product layer**, not a promise that arbitrary new business logic can be invented without engineering.
+VYAVANTA should give authorised administrators a controlled way to configure the experience each audience sees, without requiring a code release for every supported change. This is a **configuration-driven product layer**, not a promise that arbitrary new business logic can be invented without engineering.
 
 An admin should be able to:
 - change supported brand tokens and screen layouts;
@@ -297,7 +297,7 @@ Every endpoint needs authenticated server authorization, tenant scope, validatio
     "surface": "customer_app",
     "schemaVersion": 1,
     "publishedAt": "2026-10-17T09:30:00Z",
-    "theme": { "primary": "#0F2D4A", "accent": "#16C47F" },
+    "theme": { "primary": "#0e2a5b", "accent": "#6a26d4" },
     "pages": {
       "home": [
         { "id": "hero-main", "type": "hero_banner", "props": { "title": "Discover local favourites" } },

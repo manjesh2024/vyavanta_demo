@@ -1,4 +1,4 @@
-# Vyavsetu Architecture & Business Flowcharts
+# VYAVANTA Architecture & Business Flowcharts
 
 These are proposed production workflows, not implemented backend behaviour. Mermaid diagrams display in GitHub Markdown.
 

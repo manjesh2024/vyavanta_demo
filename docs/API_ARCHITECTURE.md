@@ -1,4 +1,4 @@
-# Vyavsetu API Architecture, JSON Contracts & Java Blueprint
+# VYAVANTA API Architecture, JSON Contracts & Java Blueprint
 
 **Status:** Proposed production contract, API v1 · **Reviewed against repo:** 2026-10-16
 
@@ -608,7 +608,7 @@ Use one deployable modular monolith initially. Root package: com.vyavsetu.
 
 ~~~text
 com.vyavsetu
-├── VyavsetuApplication.java
+├── VYAVANTAApplication.java
 ├── common/{api,security,tracing,money,idempotency,outbox}
 ├── identity/{api,application,domain,infrastructure}
 ├── tenancy/{api,application,domain,infrastructure}
@@ -977,12 +977,12 @@ Keep one connection per signed-in app session, not one connection per widget. Ca
 import 'dart:convert';
 import 'package:stomp_dart_client/stomp_dart_client.dart';
 
-class VyavsetuRealtimeClient {
+class VYAVANTARealtimeClient {
   StompClient? _client;
   final void Function(Map<String, dynamic>) onEvent;
   final void Function(Object error)? onError;
 
-  VyavsetuRealtimeClient({required this.onEvent, this.onError});
+  VYAVANTARealtimeClient({required this.onEvent, this.onError});
 
   void connect({
     required String wsUrl,

@@ -1,11 +1,11 @@
-# Vyavsetu — Developer Handoff
+# VYAVANTA — Developer Handoff
 
-**Tagline:** One Ecosystem. Every Business.  
+**Tagline:** EVERY BUSINESS. ONE ECOSYSTEM.  
 **Status:** Interactive demo prototype; not a production billing system.
 
 ## 1. Product scope
 
-Vyavsetu is a connected commerce platform for restaurant and retail businesses. The intended product family includes:
+VYAVANTA is a connected commerce platform for restaurant and retail businesses. The intended product family includes:
 
 - Business Admin: stores/locations, catalog, staff, reports and settings.
 - POS Terminal: offline-capable counter billing, provisional bill, payment and final invoice.
@@ -20,46 +20,24 @@ The current HTML demo presents sample data and illustrative interactions. It doe
 
 ## 2. Brand guidelines
 
-### Official direction
-- Brand: **Vyavsetu**
-- Tagline: **One Ecosystem. Every Business.**
-- Concept: three-petal V-inspired mark; a bridge between merchants, customers, operations and delivery.
-- Logo files:
-  - [Light-background lockup](../assets/vyavsetu-lockup-light.svg)
-  - [Dark-background lockup](../assets/vyavsetu-lockup-dark.svg)
-  - [Horizontal lockup](../assets/vyavsetu-horizontal.svg)
-  - [Primary mark](../assets/vyavsetu-mark.svg)
-  - [Navy monochrome mark](../assets/vyavsetu-mark-navy.svg)
-  - [White monochrome mark](../assets/vyavsetu-mark-white.svg)
-  - [Light app icon](../assets/vyavsetu-app-icon-light.svg)
-  - [Dark app icon](../assets/vyavsetu-app-icon-dark.svg)
+### Official identity
 
-The SVG lockups use vector paths for scalable rendering. Before external print production or legal brand registration, compare these vector files against the approved visual reference and complete trademark clearance.
+- Brand: **VYAVANTA**
+- Tagline: **Every Business. One Ecosystem.**
+- Selected visual direction: circular/orbit-like emblem with purple, violet, magenta/pink and orange gradients; navy wordmark.
+- Logo artwork must come from the clean original master supplied by the product owner. Do not redraw, regenerate, approximate, recolour, simplify or reconstruct it.
 
-### Colour tokens
+### Current asset status
 
-| Token | HEX | Intended use |
-|---|---|---|
-| Navy | `#0F2D4A` | Brand text, dark surfaces, stability |
-| Growth Green | `#16C47F` | Primary actions, growth |
-| Technology Cyan | `#0EA5E9` | Information, technology |
-| Energy Orange | `#F59E0B` | Highlights, energy |
-| Light Canvas | `#F4F7F9` | Page background |
-| Surface | `#FFFFFF` | Cards and panels |
-| Main Text | `#10283B` | Main copy |
-| Muted Text | `#657D8D` | Secondary copy |
+The source repository's checked-in `vyavsetu-*.svg` files are legacy source-brand approximations/traces and are not official VYAVANTA artwork. The located `vyavanta_logo_assets.zip` documents itself as raster crops from a brand-board image, not original editable/vector master artwork. Neither should be passed off as the official logo or used as production assets.
 
-Theme variants in the demo: Light, Dark, Ocean, Forest, High Contrast. Production themes must share semantic token names (surface, on-surface, primary, border, success, warning, danger), not hardcode component-specific colours.
+Until the clean original master or approved original export pack is provided, use text-only VYAVANTA placeholders. Do not use legacy logo images on login, navigation, invoices, receipts, customer/driver apps or app icons.
 
-### Logo usage
-1. Preserve proportions, artwork and colour assignments. Never stretch, rotate or add unapproved effects.
-2. Keep clear space around the mark.
-3. Use the full lockup where the audience needs to learn the brand; use mark-only for app icons and very compact controls.
-4. Select a background-compatible variant. Verify contrast in light, dark and high-contrast modes.
-5. Treat the SVG as the source of truth for digital display; raster exports should be regenerated from that source for any required pixel dimensions.
+### Colors and design tokens
 
-### Typography
-Use a geometric sans-serif style consistent with Poppins for headings/brand presentation, with a system sans-serif fallback for performance and portability. Honour OS text scaling and browser zoom. Do not embed a font without reviewing its license.
+Purple/violet, magenta/pink, orange/light orange and navy are the provisional visual direction. HEX values shown on reference boards are not authoritative. Extract the actual logo colors from the clean master and record sampled HEX, method and semantic token assignments before finalizing the design system.
+
+Production themes must share semantic tokens (primary, secondary, accent, surface, on-surface, border, success, warning, danger) rather than hardcoding component-specific colors. Validate contrast in light, dark and high-contrast modes.
 
 ## 3. Responsive design contract
 
