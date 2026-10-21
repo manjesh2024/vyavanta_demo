@@ -1,41 +1,23 @@
-# Responsive Device & QA Matrix
+# VYAVANTA Responsive Device Matrix
 
-## Layout breakpoints
+The HTML prototype is intended to adapt across desktop, laptop, store POS, tablet/iPad and phone viewports. These starting widths describe layout behavior, not model detection.
 
-| Class | Width guide | Layout | Primary validation |
-|---|---:|---|---|
-| Wide desktop | ≥1440 px | Full sidebar, multi-column dashboard, dense tables | No overflow; keyboard/mouse; readable tables |
-| Desktop/laptop | 1200–1439 px | Full sidebar, responsive cards | Long business names; table filters; browser zoom |
-| Store POS | 900–1199 px | Touch/scanner-first checkout | Search/scan, cart always visible, keyboard focus, totals readable |
-| Tablet / iPad | 620–899 px | Compact nav, two-column/stacked panels | Portrait + landscape; split screen; touch targets |
-| Mobile Android/iPhone | ≤619 px | Single-column, compact/scrollable nav | Safe areas, long labels, accessible focus, no horizontal overflow |
+| Surface | Starting width | Acceptance expectation |
+|---|---:|---|
+| Desktop / laptop | ≥ 1200 px | Full navigation, analytics, dense tables and multi-column panels |
+| Store POS | 900–1199 px | Large touch targets, visible cart, keyboard/scanner-friendly flow |
+| Tablet / iPad | 620–899 px | Compact navigation, responsive panels, portrait and landscape support |
+| Android / iPhone | ≤ 619 px | Single-column content, safe-area insets, reachable actions and readable scaling |
 
-Treat these as initial web-demo breakpoints. Production Flutter layouts must use available constraints, orientation and text scaling rather than model-name checks.
+## Brand treatment
 
-## Theme validation
+The current VYAVANTA prototype uses text-only wordmark placeholders until the clean original master artwork is installed. Do not substitute legacy source-brand SVG approximations or crops from brand-board images. Once the master is available, test the approved light and dark variants on every surface and validate contrast without modifying the artwork.
 
-- Light: background/surface/text and borders stay distinct.
-- Dark: all cards, menus, fields, disabled states and charts remain readable.
-- Ocean and Forest: semantic meanings remain stable despite palette changes.
-- High contrast: borders, focus rings and status states are distinguishable without colour alone.
-- Persist user preference where expected; don't persist a one-time device-preview width as actual production layout.
+## Test requirements
 
-## Critical application flows to test
-
-- Login success, expired session, revoked membership, no permission, no tenant selected.
-- POS: empty cart, out-of-stock, changed price, discount denied, cash, gateway success, decline, unknown timeout, duplicate click, invoice issue, print failure.
-- Offline: mutate while offline, kill/restart, reconnect, duplicate push, server validation error, conflict, session expiry, pull while the user is already using a screen.
-- Restaurant: duplicate/stale KDS transition, cancellation from each permitted state, kitchen/driver race for ready orders.
-- Inventory: concurrent terminals, receiving, transfer, stock count correction, reorder threshold.
-- Marketplace: closed store, out-of-zone delivery, item becomes unavailable, merchant rejects, driver declines, partial failure during notification.
-- SaaS admin: trial expiry, downgrade, entitlement removal, tenant suspended, operator audit.
-- Hardware: printer unavailable, out of paper, wrong width, drawer kick allowed/disallowed, reprint duplicate warning.
-
-## Accessibility checklist
-
-- Semantic labels for icons/buttons and clear focus order.
-- Keyboard navigation for desktop POS/admin.
-- Touch targets ideally ≥44×44 CSS px.
-- 200% browser zoom and OS font scaling without clipping.
-- Sufficient contrast in every theme; status not communicated by colour alone.
-- Reduced-motion respect and no critical state conveyed by animation alone.
+- Test 200% zoom and OS/browser text scaling.
+- Check keyboard navigation, focus visibility and screen-reader semantics.
+- Exercise split-screen, landscape, keyboard-visible and narrow-width states.
+- Verify empty, loading, error and offline states.
+- Touch targets should generally be at least 44 × 44 CSS pixels where practical.
+- Validate actual iOS/Android/iPad/Windows hardware separately; browser viewport simulations are not device verification.
