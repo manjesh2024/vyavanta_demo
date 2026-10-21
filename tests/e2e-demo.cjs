@@ -8,10 +8,11 @@ const { chromium } = require('playwright');
   page.on('pageerror', error => pageErrors.push(error.message));
   try {
     await page.goto(process.env.VYAVANTA_URL || 'http://127.0.0.1:8000/', { waitUntil: 'domcontentloaded' });
-    await page.locator('header .brand-lockup').waitFor();
-    const workspaceLogo = await page.locator('header .brand-lockup').evaluate(img => ({src:img.getAttribute('src'),complete:img.complete,width:img.naturalWidth,alt:img.alt}));
+    await page.locator('header .brand-lockup').waitFor({state:'attached'});
+    const workspaceLogo = await page.locator('header .brand-lockup').evaluate(img => ({src:img.getAttribute('src'),complete:img.complete,width:img.naturalWidth,alt:img.alt,visible:img.getClientRects().length>0 && getComputedStyle(img).visibility!=='hidden'}));
     assert.equal(workspaceLogo.src,'assets/vyavanta-horizontal-light.webp','Workspace header must use the approved light VYAVANTA logo');
     assert.equal(workspaceLogo.complete && workspaceLogo.width>0,true,'Workspace logo must load');
+    assert.equal(workspaceLogo.visible,true,'Workspace header logo must be visible');
     const app = page.frameLocator('#app');
     await app.locator('#nav').waitFor();
 
