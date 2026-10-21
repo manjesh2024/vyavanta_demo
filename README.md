@@ -26,14 +26,15 @@ Then visit `http://localhost:8000`.
 - [Demo verification report](docs/test-report.html)
 - [Hinglish quick start](docs/quick-start-hinglish.html)
 
-## Migration status
+## Repository snapshot and migration status
 
-This target is being bootstrapped from the inspected [Vyavsetu source repository](https://github.com/manjesh2024/vyavsetu). The source repository is not modified by this copy.
+The 45 file paths in the source snapshot at commit `43b26a96f465188b5dc8ae555856b0ea93ff1b9c` were copied into this target and verified against the target tree on 2026-10-21. The source repository at [manjesh2024/vyavsetu](https://github.com/manjesh2024/vyavsetu) was not modified.
 
-- Prototype code, application surfaces, tests, assets and documentation are carried forward for evaluation.
-- The current source UI and SVG assets have not yet completed the VYAVANTA visual rebrand.
-- The checked-in source SVGs are documented as legacy approximations, not approved master artwork. They must not be represented as the official VYAVANTA logo or used for final production branding.
-- The clean original VYAVANTA master artwork must be installed before producing final logo exports, extracting authoritative color tokens or switching logo usage in UI/receipts.
+- The target uses its own commit history; the source commit ancestry was not transferred by the API-based snapshot copy.
+- The interactive HTML prototype, customer/driver/store surfaces, Configuration Studio, docs, workflows, assets and tests are present.
+- Visible product branding was updated to VYAVANTA. Text-only wordmark placeholders replace legacy logo usage until the clean master artwork is available.
+- Purple/violet/magenta/orange theme styling is provisional. Final logo exports and authoritative color tokens are blocked until the original master artwork is supplied.
+- The source SVGs remain in the repository for traceability only; they are not official VYAVANTA assets.
 
 See [BRAND.md](BRAND.md) and [assets/README.md](assets/README.md) for the artwork guardrails.
 

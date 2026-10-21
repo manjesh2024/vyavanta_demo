@@ -3,6 +3,19 @@
 **Tagline:** EVERY BUSINESS. ONE ECOSYSTEM.  
 **Status:** Interactive demo prototype; not a production billing system.
 
+## Implementation status — verified 2026-10-21
+
+| Status | Area | Evidence / boundary |
+|---|---|---|
+| Completed | Repository snapshot | All 45 source file paths were copied to this target; recursive source/target path comparison found no missing or extra paths. The source repository was not modified. |
+| Completed | Demo validation | [JavaScript/capability validation](https://github.com/manjesh2024/vyavanta_demo/actions/runs/39553166193) and [Chromium end-to-end workflow](https://github.com/manjesh2024/vyavanta_demo/actions/runs/39553166336) passed for the reviewed target commit. |
+| Partial | VYAVANTA rebrand | Visible brand text and demo/docs styling were updated. Logo slots currently show text-only placeholders, not official master artwork. |
+| Blocked | Official logo and color extraction | The clean original VYAVANTA master artwork is not present in the repo. The located logo ZIP contains brand-board crops/icon-size examples, not original editable/vector master artwork. |
+| Blocked | Hosted preview | GitHub Pages is disabled for the target repository. The Actions workflow safely skips deployment and reports the setting to enable; no live Pages deployment is claimed. |
+| Planned / not implemented | Production clients and backend | Flutter production apps, Spring Boot modules, PostgreSQL persistence, Drift/SQLite offline sync, live authentication/RBAC, tenant isolation enforcement, payments/webhooks, statutory tax/invoice engine, physical printer/cash-drawer integrations and cross-device synchronization are not connected. |
+
+**Verification note:** The copied demo’s browser-local actions remain simulations. A passing prototype test does not certify the production architecture, legal invoicing, real payment processing, hardware output or mobile/desktop device behavior.
+
 ## 1. Product scope
 
 VYAVANTA is a connected commerce platform for restaurant and retail businesses. The intended product family includes:
