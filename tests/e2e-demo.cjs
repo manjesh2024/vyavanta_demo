@@ -296,9 +296,9 @@ const { chromium } = require('playwright');
       await app.locator('[data-print-format="' + format + '"]').click();
       const renderedLayout = await app.locator('#printRoot > article').getAttribute('class');
       assert.ok(renderedLayout.includes(layoutClass), 'Wrong print layout for ' + format + ': ' + renderedLayout);
-      const printWordmarks = await app.locator('#printRoot .master-logo-pending').evaluateAll(nodes => nodes.map(node => ({text: node.textContent.trim(), role: node.getAttribute('role')})));
-      assert.ok(printWordmarks.length > 0, 'Expected a VYAVANTA text-only wordmark in the ' + format + ' print layout');
-      assert.ok(printWordmarks.every(item => item.text.includes('VYAVANTA')), 'Print wordmark did not render for ' + format + ': ' + JSON.stringify(printWordmarks));
+      const printLogos = await app.locator('#printRoot img.thermal-logo, #printRoot img.invoice-brand').evaluateAll(imgs => imgs.map(img => ({src: img.getAttribute('src'), complete: img.complete, width: img.naturalWidth, alt: img.alt})));
+      assert.ok(printLogos.length > 0, 'Expected the VYAVANTA logo in the ' + format + ' print layout');
+      assert.ok(printLogos.every(item => item.src === 'assets/vyavanta-horizontal-light.webp' && item.complete && item.width > 0 && item.alt.includes('VYAVANTA')), 'Print logo did not load for ' + format + ': ' + JSON.stringify(printLogos));
       await app.locator('[data-action="close-dialog"]').last().click();
     }
 
@@ -314,12 +314,14 @@ const { chromium } = require('playwright');
     await page.waitForFunction(() => document.querySelector('#shell').getBoundingClientRect().width > 1000);
     await app.locator('#localTheme').selectOption('dark');
     await page.waitForFunction(() => document.querySelector('#app')?.contentDocument?.documentElement?.dataset?.theme === 'dark');
-    const darkWordmark = await app.locator('#sidebarLockup').evaluate(el => ({tag:el.tagName,text:el.textContent.trim(),src:el.getAttribute('src')}));
-    assert.deepEqual(darkWordmark, {tag:'SPAN',text:'VYAVANTA',src:null}, 'Dark theme must show text-only VYAVANTA branding until the clean master artwork is installed');
+    const darkLogo = await app.locator('#sidebarLockup').evaluate(el => ({tag:el.tagName,src:el.getAttribute('src'),complete:el.complete,width:el.naturalWidth}));
+    assert.deepEqual({tag:darkLogo.tag,src:darkLogo.src}, {tag:'IMG',src:'assets/vyavanta-horizontal-dark.webp'}, 'Dark theme must use the approved light-wordmark logo variant');
+    assert.equal(darkLogo.complete && darkLogo.width > 0, true, 'Dark theme logo must load');
     await app.locator('#localTheme').selectOption('light');
     await page.waitForFunction(() => document.querySelector('#app')?.contentDocument?.documentElement?.dataset?.theme === 'light');
-    const lightWordmark = await app.locator('#sidebarLockup').evaluate(el => ({tag:el.tagName,text:el.textContent.trim(),src:el.getAttribute('src')}));
-    assert.deepEqual(lightWordmark, {tag:'SPAN',text:'VYAVANTA',src:null}, 'Light theme must show text-only VYAVANTA branding until the clean master artwork is installed');
+    const lightLogo = await app.locator('#sidebarLockup').evaluate(el => ({tag:el.tagName,src:el.getAttribute('src'),complete:el.complete,width:el.naturalWidth}));
+    assert.deepEqual({tag:lightLogo.tag,src:lightLogo.src}, {tag:'IMG',src:'assets/vyavanta-horizontal-light.webp'}, 'Light theme must use the approved dark-wordmark logo variant');
+    assert.equal(lightLogo.complete && lightLogo.width > 0, true, 'Light theme logo must load');
     await page.setViewportSize({width:390,height:844});
     const dimensions = await page.evaluate(() => {
       const frame = document.querySelector('#app');
