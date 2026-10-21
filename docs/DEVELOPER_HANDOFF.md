@@ -9,8 +9,8 @@
 |---|---|---|
 | Completed | Repository snapshot | All 45 source file paths were copied to this target; recursive source/target path comparison found no missing or extra paths. The source repository was not modified. |
 | Completed | Demo validation | [JavaScript/capability validation](https://github.com/manjesh2024/vyavanta_demo/actions/runs/39553166193) and [Chromium end-to-end workflow](https://github.com/manjesh2024/vyavanta_demo/actions/runs/39553166336) passed for the reviewed target commit. |
-| Partial | VYAVANTA rebrand | Visible brand text and demo/docs styling were updated. Logo slots currently show text-only placeholders, not official master artwork. |
-| Blocked | Official logo and color extraction | The clean original VYAVANTA master artwork is not present in the repo. The located logo ZIP contains brand-board crops/icon-size examples, not original editable/vector master artwork. |
+| Completed | VYAVANTA branding foundation | Supplied light/dark horizontal logos and symbol-only file are committed. Main, customer, driver, store and Studio surfaces use logo assets and a teal/aqua/navy/orange theme. |
+| Completed | Brand palette | HEX values are taken from the supplied identity board; contrast-safe darker teal tokens are used for controls where necessary. Logo colors themselves remain unchanged. |
 | Blocked | Hosted preview | GitHub Pages is disabled for the target repository. The Actions workflow safely skips deployment and reports the setting to enable; no live Pages deployment is claimed. |
 | Planned / not implemented | Production clients and backend | Flutter production apps, Spring Boot modules, PostgreSQL persistence, Drift/SQLite offline sync, live authentication/RBAC, tenant isolation enforcement, payments/webhooks, statutory tax/invoice engine, physical printer/cash-drawer integrations and cross-device synchronization are not connected. |
 
@@ -34,23 +34,23 @@ The current HTML demo presents sample data and illustrative interactions. It doe
 ## 2. Brand guidelines
 
 ### Official identity
-
 - Brand: **VYAVANTA**
 - Tagline: **EVERY BUSINESS. ONE ECOSYSTEM.**
-- Selected visual direction: circular/orbit-like emblem with purple, violet, magenta/pink and orange gradients; navy wordmark.
-- Logo artwork must come from the clean original master supplied by the product owner. Do not redraw, regenerate, approximate, recolour, simplify or reconstruct it.
+- The committed light/dark horizontal logos and symbol-only icon live under `assets/vyavanta-*.webp`.
+- Do not redraw, recolour, stretch, crop or reconstruct the logo. Switch between supplied light/dark assets based on background contrast.
 
-### Current asset status
+### Palette
+- Primary teal: `#008B8A`
+- Secondary teal: `#14B8A6`
+- Aqua: `#22D4BF`
+- Orange: `#FF8A3D`
+- Navy: `#0E2A5B`
+- Silver: retain the original neutral silver gradient inside the logo.
 
-The source repository's checked-in `vyavsetu-*.svg` files are legacy source-brand approximations/traces and are not official VYAVANTA artwork. The located `vyavanta_logo_assets.zip` documents itself as raster crops from a brand-board image, not original editable/vector master artwork. Neither should be passed off as the official logo or used as production assets.
+Use darker teal UI tokens such as `#006F70` for white-on-teal interactive controls when required to meet contrast expectations. This affects UI controls only—not the logo art.
 
-Until the clean original master or approved original export pack is provided, use text-only VYAVANTA placeholders. Do not use legacy logo images on login, navigation, invoices, receipts, customer/driver apps or app icons.
-
-### Colors and design tokens
-
-Purple/violet, magenta/pink, orange/light orange and navy are the provisional visual direction. HEX values shown on reference boards are not authoritative. Extract the actual logo colors from the clean master and record sampled HEX, method and semantic token assignments before finalizing the design system.
-
-Production themes must share semantic tokens (primary, secondary, accent, surface, on-surface, border, success, warning, danger) rather than hardcoding component-specific colors. Validate contrast in light, dark and high-contrast modes.
+### Design-system contract
+Use one semantic token system across all surfaces and layouts. Light themes use pale surfaces and navy text; dark themes use deep teal/navy surfaces and near-white text. Teal carries primary actions, aqua carries focus/selection accents and orange is sparing emphasis. Buttons, links, inputs and navigation require visible hover, active, disabled and keyboard-focus states.
 
 ## 3. Responsive design contract
 

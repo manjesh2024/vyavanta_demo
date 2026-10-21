@@ -23,7 +23,7 @@ All three prototypes use independent browser-local demo state. They are **not co
 
 ## Branding and reference
 
-The customer experience is an independent grocery-shopping prototype. VYAVANTA’s clean master logo has not yet been installed; old source-brand SVG approximations are not used as the official logo. Customer, driver and merchant app branding currently uses text-only VYAVANTA wordmarks and a provisional purple/violet/magenta/orange palette. The clean master artwork must be supplied before final logo exports or authoritative HEX extraction.
+Customer, driver and merchant surfaces use the VYAVANTA logo assets committed under `assets/vyavanta-*.webp`. Their shared theme direction is teal `#008B8A`, secondary teal `#14B8A6`, aqua `#22D4BF`, orange `#FF8A3D` and navy `#0E2A5B`. The horizontal dark logo is for deep navy/teal headers; the light logo is for light surfaces. Keep the artwork unchanged and apply contrast adjustments to the UI around it.
 
 ## Run locally
 

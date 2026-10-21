@@ -2,12 +2,12 @@
 
 ## Automated checks
 
-The source snapshot passed its JavaScript validation on October 17, 2026. The copied target must be judged by the latest [VYAVANTA Actions runs](https://github.com/manjesh2024/vyavanta_demo/actions), not by the source run. GitHub Pages needs to be enabled in the target repository before a live Pages deployment can publish.
+The source snapshot passed its JavaScript validation on October 17, 2026. The copied target must be judged by the latest [VYAVANTA Actions runs](https://github.com/manjesh2024/vyavanta_demo/actions), not by the source run. GitHub Pages is still disabled in repository settings; the workflow safely reports this rather than publishing a live site.
 GitHub Actions runs JavaScript/feature-hook validation, Chromium end-to-end tests and GitHub Pages deployment against the current main branch. Check the [Actions dashboard](https://github.com/manjesh2024/vyavanta_demo/actions) for the latest commit's live status; run links are deliberately not pinned here so this report does not become stale on the next commit.
 
 ## Branding status
 
-The visible prototype and documentation are being rebranded with the VYAVANTA name and a provisional purple/violet/magenta/orange theme direction. Text-only VYAVANTA placeholders are used where a logo would otherwise appear. The clean original master logo has not yet been identified; old Vyavsetu SVG approximations and brand-board crops are deliberately not used as production logo artwork. Extract final palette HEX values only after the clean master is available.
+The supplied VYAVANTA horizontal light/dark logo and symbol-only asset are committed in `assets/`. Customer, driver, merchant/store, Studio, workspace and print previews use these assets. Theme tokens follow the provided teal `#008B8A`, secondary teal `#14B8A6`, aqua `#22D4BF`, orange `#FF8A3D` and navy `#0E2A5B` palette. The current E2E test checks that light/dark logo variants load and that print layouts display the supplied logo.
 
 ## Interactions covered by the prototype
 - POS: product add/quantity controls, stock guard, illustrative total calculation, Cash/Dummy UPI/Dummy Card, provisional bill save/resume, clear cart.

@@ -28,15 +28,15 @@ Then visit `http://localhost:8000`.
 
 ## Repository snapshot and migration status
 
-The 45 file paths in the source snapshot at commit `43b26a96f465188b5dc8ae555856b0ea93ff1b9c` were copied into this target and verified against the target tree on 2026-10-21. The source repository at [manjesh2024/vyavsetu](https://github.com/manjesh2024/vyavsetu) was not modified.
+The 45-file source snapshot at commit `43b26a96f465188b5dc8ae555856b0ea93ff1b9c` was copied to this target and path-verified. The source repository at [manjesh2024/vyavsetu](https://github.com/manjesh2024/vyavsetu) remains untouched. The target has its own Git history; source commit ancestry was not transferred by the API-based copy.
 
-- The target uses its own commit history; the source commit ancestry was not transferred by the API-based snapshot copy.
-- The interactive HTML prototype, customer/driver/store surfaces, Configuration Studio, docs, workflows, assets and tests are present.
-- Visible product branding was updated to VYAVANTA. Text-only wordmark placeholders replace legacy logo usage until the clean master artwork is available.
-- Purple/violet/magenta/orange theme styling is provisional. Final logo exports and authoritative color tokens are blocked until the original master artwork is supplied.
-- The source SVGs remain in the repository for traceability only; they are not official VYAVANTA assets.
+- The browser prototype, customer/driver/store surfaces, Configuration Studio, docs, workflows, assets and tests are present.
+- VYAVANTA logo variants from the supplied identity artwork are stored under `assets/vyavanta-*.webp`.
+- Main/app themes and visual documentation use the supplied teal/aqua/navy/orange palette with contrast-safe interaction tokens.
+- The legacy `vyavsetu-*.svg` source files remain for migration traceability only and are not referenced by the current UI.
+- Production Flutter/Spring Boot services and device/hardware integrations remain outside this HTML demo.
 
-See [BRAND.md](BRAND.md) and [assets/README.md](assets/README.md) for the artwork guardrails.
+See [BRAND.md](BRAND.md) and [assets/README.md](assets/README.md) for exact asset names, color values and usage rules.
 
 ## Product/production boundary
 

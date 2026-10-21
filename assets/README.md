@@ -1,32 +1,24 @@
 # VYAVANTA Brand Asset Directory
 
-## Status: master artwork required
+## Committed logo assets
 
-This directory was copied from the source prototype. The existing `vyavsetu-*.svg` files are legacy source-brand vectors; the source repository's own documentation identifies them as approximations/traces and states the approved original artwork is separate.
+| File | Intended use | Background |
+|---|---|---|
+| `vyavanta-horizontal-light.webp` | Full horizontal logo and tagline in headers, invoices and receipts | White/light surfaces |
+| `vyavanta-horizontal-dark.webp` | Full horizontal logo and tagline in dark app headers and brand panels | Deep navy/teal surfaces |
+| `vyavanta-mark-teal.webp` | Symbol-only asset for favicon and compact icon contexts | Use only where contrast is suitable |
 
-**Do not use those files as VYAVANTA branding.** They are retained for source migration traceability only until all prototype references are safely migrated.
+These exports are derived from the supplied VYAVANTA teal identity artwork. Use them as supplied; do not redraw, recolour, stretch, crop, rotate or add effects. To improve legibility, select the correct approved variant or adjust the surrounding surface.
 
-A Library ZIP named `vyavanta_logo_assets.zip` was located. Its included README says its examples are raster crops from a brand-board image, not original editable/vector artwork; some include panel borders, labels or mockup context. Do not promote those crops to production master assets.
+The older `vyavsetu-*.svg` files are retained for source migration traceability only. They must not be used in VYAVANTA UI or print output.
 
-## Required VYAVANTA asset set
+## Palette
 
-After the clean master artwork/approved original export pack is available, place faithful exports here and record the source file/checksum:
+- Primary teal: `#008B8A`
+- Secondary teal: `#14B8A6`
+- Aqua accent: `#22D4BF`
+- Orange accent: `#FF8A3D`
+- Navy: `#0E2A5B`
+- Silver: retain the original neutral silver gradient inside the logo
 
-- `vyavanta-primary-stacked-light.png` and approved vector source
-- `vyavanta-primary-stacked-dark.png` / approved original variant
-- `vyavanta-horizontal-light.png` and `vyavanta-horizontal-dark.png`
-- `vyavanta-symbol-only.png`
-- `vyavanta-app-icon-light.png` and `vyavanta-app-icon-dark.png`
-- favicon sizes and app-store exports derived from the official symbol artwork only
-
-These are target naming conventions, not a claim that these files already exist.
-
-## Asset acceptance checklist
-
-- [ ] Artwork matches the clean master without modification.
-- [ ] Source checksum and origin are documented.
-- [ ] Transparent/light/dark variants are approved originals or faithful raster exports.
-- [ ] The tagline reads exactly `EVERY BUSINESS. ONE ECOSYSTEM.`.
-- [ ] Logo colors are sampled from the master and recorded.
-- [ ] Light/dark contrast and minimum sizes are tested.
-- [ ] UI, invoices, receipts, favicon and application icons reference only approved assets.
+Use darker teal UI tokens for accessible white-on-teal text where needed. Never modify logo colors to solve UI contrast.
