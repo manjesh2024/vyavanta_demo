@@ -296,7 +296,7 @@ const { chromium } = require('playwright');
       await app.locator('[data-print-format="' + format + '"]').click();
       const renderedLayout = await app.locator('#printRoot > article').getAttribute('class');
       assert.ok(renderedLayout.includes(layoutClass), 'Wrong print layout for ' + format + ': ' + renderedLayout);
-      const printWordmarks = await app.locator('#printRoot .receipt-preview-logo').evaluateAll(nodes => nodes.map(node => ({text: node.textContent.trim(), role: node.getAttribute('role')})));
+      const printWordmarks = await app.locator('#printRoot .master-logo-pending').evaluateAll(nodes => nodes.map(node => ({text: node.textContent.trim(), role: node.getAttribute('role')})));
       assert.ok(printWordmarks.length > 0, 'Expected a VYAVANTA text-only wordmark in the ' + format + ' print layout');
       assert.ok(printWordmarks.every(item => item.text.includes('VYAVANTA')), 'Print wordmark did not render for ' + format + ': ' + JSON.stringify(printWordmarks));
       await app.locator('[data-action="close-dialog"]').last().click();
