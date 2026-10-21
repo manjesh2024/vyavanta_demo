@@ -1,4 +1,4 @@
-name: Deploy Vyavsetu demo to GitHub Pages
+name: Deploy VYAVANTA demo to GitHub Pages
 on:
   push:
     branches: [main]
@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   deploy:
+    if: ${{ github.event.repository.has_pages == true }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,3 +29,10 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+  pages-disabled:
+    if: ${{ github.event.repository.has_pages != true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain required repository setting
+        run: |
+          echo "::notice title=GitHub Pages is disabled::Enable Pages in Settings > Pages and choose GitHub Actions as the build/deployment source to publish this static demo."

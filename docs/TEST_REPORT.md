@@ -1,7 +1,13 @@
-# Vyavsetu Demo Verification
+# VYAVANTA Demo Verification
 
 ## Automated checks
-GitHub Actions runs JavaScript/feature-hook validation, Chromium end-to-end tests and GitHub Pages deployment against the current main branch. Check the [Actions dashboard](https://github.com/manjesh2024/vyavsetu/actions) for the latest commit's live status; run links are deliberately not pinned here so this report does not become stale on the next commit.
+
+The source snapshot passed its JavaScript validation on October 17, 2026. The copied target must be judged by the latest [VYAVANTA Actions runs](https://github.com/manjesh2024/vyavanta_demo/actions), not by the source run. GitHub Pages needs to be enabled in the target repository before a live Pages deployment can publish.
+GitHub Actions runs JavaScript/feature-hook validation, Chromium end-to-end tests and GitHub Pages deployment against the current main branch. Check the [Actions dashboard](https://github.com/manjesh2024/vyavanta_demo/actions) for the latest commit's live status; run links are deliberately not pinned here so this report does not become stale on the next commit.
+
+## Branding status
+
+The visible prototype and documentation are being rebranded with the VYAVANTA name and a provisional purple/violet/magenta/orange theme direction. Text-only VYAVANTA placeholders are used where a logo would otherwise appear. The clean original master logo has not yet been identified; old Vyavsetu SVG approximations and brand-board crops are deliberately not used as production logo artwork. Extract final palette HEX values only after the clean master is available.
 
 ## Interactions covered by the prototype
 - POS: product add/quantity controls, stock guard, illustrative total calculation, Cash/Dummy UPI/Dummy Card, provisional bill save/resume, clear cart.

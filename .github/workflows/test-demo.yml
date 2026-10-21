@@ -1,4 +1,4 @@
-name: Validate Vyavsetu demo
+name: Validate VYAVANTA demo
 on:
   push:
     branches: [main]

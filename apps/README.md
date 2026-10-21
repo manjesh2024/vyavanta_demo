@@ -1,6 +1,6 @@
-# Vyavsetu Standalone App Prototypes
+# VYAVANTA Standalone App Prototypes
 
-This folder introduces isolated web prototypes alongside the existing Vyavsetu root experience. The existing `index.html` and root demo are not replaced.
+This folder introduces isolated web prototypes alongside the existing VYAVANTA root experience. The existing `index.html` and root demo are not replaced.
 
 ## App entry points
 
@@ -19,11 +19,11 @@ This folder introduces isolated web prototypes alongside the existing Vyavsetu r
 
 ## Deliberate integration boundary
 
-All three prototypes use independent browser-local demo state. They are **not connected to one another yet** and do not dispatch real orders, charge payments, track live routes, send push notifications, or authenticate users. This is intentional: review each product surface and workflow first, then implement an explicit shared order adapter for existing Vyavsetu marketplace demo data.
+All three prototypes use independent browser-local demo state. They are **not connected to one another yet** and do not dispatch real orders, charge payments, track live routes, send push notifications, or authenticate users. This is intentional: review each product surface and workflow first, then implement an explicit shared order adapter for existing VYAVANTA marketplace demo data.
 
 ## Branding and reference
 
-The user-supplied grocery-shopping screenshot is a UX reference for category density and shopping flow only. Vyavsetu’s existing logo assets, green/navy palette, original copy, layout and components are used for an independent design; the reference app’s name or artwork is not copied.
+The customer experience is an independent grocery-shopping prototype. VYAVANTA’s clean master logo has not yet been installed; old source-brand SVG approximations are not used as the official logo. Customer, driver and merchant app branding currently uses text-only VYAVANTA wordmarks and a provisional purple/violet/magenta/orange palette. The clean master artwork must be supplied before final logo exports or authoritative HEX extraction.
 
 ## Run locally
 
